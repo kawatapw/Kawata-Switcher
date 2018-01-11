@@ -17,7 +17,7 @@ namespace GatariSwitcher
             InitializeComponent();
             // base init
             certificateManager = new CertificateManager();
-            switchButton.Content = "Obtaining an IP address ...";
+            switchButton.Content = "Obtaining IP address ...";
             certButton.Content = "Getting the certificate status ...";
             statusLabel.Content = Constants.UiUpdatingStatus;
             DisableSwitching();
@@ -33,8 +33,8 @@ namespace GatariSwitcher
             var serverIp = await GeneralHelper.GetGatariAddressAsync();
             if (serverIp == string.Empty)
             {
-                MessageBox.Show("An error occurred while retrieving the IP address of the ghats. Perhaps you have problems with the Internet?" + Environment.NewLine +
-                    "The built-in IP address will be used. Perhaps, it is already obsolete.");
+                MessageBox.Show("An error occurred while obtaining IP address of Gatari. May check your Internet connection?" + Environment.NewLine +
+                    "Stored IP address will be used");
                 serverIp = Constants.GatariHardcodedIp;
             }
             serverSwitcher = new ServerSwitcher(serverIp);
@@ -84,7 +84,7 @@ namespace GatariSwitcher
             }
             catch (Exception ex)
             {
-                MessageBox.Show("An error occurred while switching the server. If you are sure that it should not be and you have an antivirus turned off, ask for help! My contacts can be found in the contact block of the website"
+                MessageBox.Show("An error occurred while switching the server. If you are sure that it should not be and you have antivirus turned off, ask for help! My contacts can be found in the contact block of the VK"
                 + string.Format("\r\n\r\nDetails:\r\n{0}", ex.Message));
                 Logger.Log(ex);
             }
