@@ -20,6 +20,6 @@
 
         public const string UiSwitchToOfficial = "Disconnect from Gatari";
 
-        public const string UiUpdatingStatus = "Retrieving  addresses..";
+        public const string UiUpdatingStatus = "Retrieving addresses..";
     }
 }
