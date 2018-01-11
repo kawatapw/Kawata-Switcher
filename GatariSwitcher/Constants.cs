@@ -2,24 +2,24 @@
 {
     public class Constants
     {
-        // Use this address if the IP API is dead :D
+        // Use this address if we cannot grab from ips.txt
         public const string GatariHardcodedIp = "163.172.255.98";
 
-        // The address that can die :D
+        // Grab address from here when possible
         public const string GatariIpApiAddress = "http://osu.gatari.pw/api/v1/ip";
 
         public const string UiInstallCertificate = "Install Certificate";
 
         public const string UiUninstallCertificate = "Delete Certificate";
 
-        public const string UiYouArePlayingOnGatari = "You play on Gatari!";
+        public const string UiYouArePlayingOnGatari = "You're connected to Gatari!";
 
-        public const string UiYouArePlayingOnOfficial = "You play on the game with the devils :(";
+        public const string UiYouArePlayingOnOfficial = "You're playing on Bancho";
 
-        public const string UiSwitchToGatari = "Switch to Gatari";
+        public const string UiSwitchToGatari = "Connect to Gatari";
 
-        public const string UiSwitchToOfficial = "Back to hell";
+        public const string UiSwitchToOfficial = "Disconnect from Gatari";
 
-        public const string UiUpdatingStatus = "Getting addresses, expect ...";
+        public const string UiUpdatingStatus = "Retrieving  addresses..";
     }
 }
