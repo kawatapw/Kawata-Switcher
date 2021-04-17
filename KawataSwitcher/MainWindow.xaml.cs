@@ -30,12 +30,12 @@ namespace KawataSwitcher
             await CheckSertificate();
 
             // load server ip
-            var serverIp = await GeneralHelper.GetGatariAddressAsync();
+            var serverIp = await GeneralHelper.GetKawataAddressAsync();
             if (serverIp == string.Empty)
             {
-                MessageBox.Show("An error occurred while retrieving Gatari's IP. Maybe check your Internet connection?" + Environment.NewLine +
+                MessageBox.Show("An error occurred while retrieving Kawata's IP. Maybe check your Internet connection?" + Environment.NewLine +
                     "Stored IP address will be used");
-                serverIp = Constants.GatariHardcodedIp;
+                serverIp = Constants.KawataHardcodedIp;
             }
             serverSwitcher = new ServerSwitcher(serverIp);
 
@@ -55,10 +55,10 @@ namespace KawataSwitcher
         {
             switchButton.IsEnabled = false;
             var currentServer = await serverSwitcher.GetCurrentServerAsync();
-            statusLabel.Content = (currentServer == Server.Gatari)
-                ? Constants.UiYouArePlayingOnGatari : Constants.UiYouArePlayingOnOfficial;
+            statusLabel.Content = (currentServer == Server.Kawata)
+                ? Constants.UiYouArePlayingOnKawata : Constants.UiYouArePlayingOnOfficial;
             switchButton.Content = (currentServer == Server.Official)
-                ? Constants.UiSwitchToGatari : Constants.UiSwitchToOfficial;
+                ? Constants.UiSwitchToKawata : Constants.UiSwitchToOfficial;
             switchButton.IsEnabled = true;
         }
 
@@ -75,7 +75,7 @@ namespace KawataSwitcher
             {
                 if (serv == Server.Official)
                 {
-                    serverSwitcher.SwitchToGatari();
+                    serverSwitcher.SwitchToKawata();
                 }
                 else
                 {
@@ -84,7 +84,7 @@ namespace KawataSwitcher
             }
             catch (Exception ex)
             {
-                MessageBox.Show("An error occurred while connecting to Gatari. If you still can't connect and have tried disabling your antivirus, please ask for help either in our discord or by checking the contact block on VK"
+                MessageBox.Show("An error occurred while connecting to Kawata. If you still can't connect and have tried disabling your antivirus, please ask for help either in our Discord server or by contacting accounts[at]kawata[dot]pw."
                 + string.Format("\r\n\r\nDetails:\r\n{0}", ex.Message));
                 Logger.Log(ex);
             }
@@ -125,7 +125,7 @@ namespace KawataSwitcher
 
         private void websiteText_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            System.Diagnostics.Process.Start("http://osu.gatari.pw");
+            System.Diagnostics.Process.Start("http://kawata.pw");
         }
 
         private void titleBar_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)

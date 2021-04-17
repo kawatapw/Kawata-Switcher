@@ -38,7 +38,7 @@ namespace KawataSwitcher
             get
             {
                 return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
-                    "gatari-switcher-log.txt");
+                    "kawata-switcher-log.txt");
             }
         }
     }

@@ -9,12 +9,12 @@ namespace KawataSwitcher
     {
         private readonly string serverAddress;
 
-        public ServerSwitcher(string gatariIpAddress)
+        public ServerSwitcher(string kawataIpAddress)
         {
-            this.serverAddress = gatariIpAddress;
+            this.serverAddress = kawataIpAddress;
         }
 
-        public void SwitchToGatari()
+        public void SwitchToKawata()
         {
             var lines = HostsFile.ReadAllLines();
             var result = lines.Where(x => !x.Contains("ppy.sh")).ToList();
@@ -23,6 +23,11 @@ namespace KawataSwitcher
                 serverAddress + " osu.ppy.sh",
                 serverAddress + " c.ppy.sh",
                 serverAddress + " c1.ppy.sh",
+                serverAddress + " c2.ppy.sh",
+                serverAddress + " c3.ppy.sh",
+                serverAddress + " c4.ppy.sh",
+                serverAddress + " c5.ppy.sh",
+                serverAddress + " ce.ppy.sh",
                 serverAddress + " a.ppy.sh",
                 serverAddress + " i.ppy.sh"
             );
@@ -41,14 +46,14 @@ namespace KawataSwitcher
 
         public Server GetCurrentServer()
         {
-            bool isGatari = HostsFile.ReadAllLines().Any(x => x.Contains("osu.ppy.sh") && !x.Contains("#"));
-            return isGatari ? Server.Gatari : Server.Official;
+            bool isKawata = HostsFile.ReadAllLines().Any(x => x.Contains("osu.ppy.sh") && !x.Contains("#"));
+            return isKawata ? Server.Kawata : Server.Official;
         }
     }
 
     public enum Server
     {
         Official,
-        Gatari
+        Kawata
     }
 }
