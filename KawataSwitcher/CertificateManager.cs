@@ -16,7 +16,7 @@ namespace KawataSwitcher
             var store = new X509Store(StoreName.Root, StoreLocation.CurrentUser);
             store.Open(OpenFlags.ReadWrite);
 
-            var certificate = new X509Certificate2(KawataSwitcher.Properties.Resources.gatari);
+            var certificate = new X509Certificate2(KawataSwitcher.Properties.Resources.kawata);
             store.Add(certificate);
 
             store.Close();
@@ -27,7 +27,7 @@ namespace KawataSwitcher
             var store = new X509Store(StoreName.Root, StoreLocation.CurrentUser);
             store.Open(OpenFlags.ReadWrite);
 
-            var certificates = store.Certificates.Find(X509FindType.FindBySubjectName, "*.ppy.sh", true);
+            var certificates = store.Certificates.Find(X509FindType.FindBySubjectName, "Kawata", true);
 
             foreach (var cert in certificates)
             {
@@ -52,7 +52,7 @@ namespace KawataSwitcher
             var store = new X509Store(StoreName.Root, StoreLocation.CurrentUser);
             store.Open(OpenFlags.ReadOnly);
 
-            var c = store.Certificates.Find(X509FindType.FindBySubjectName, "*.ppy.sh", true);
+            var c = store.Certificates.Find(X509FindType.FindBySubjectName, "Kawata", true);
             bool result = c.Count >= 1;
 
             store.Close();

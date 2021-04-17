@@ -115,6 +115,7 @@
     </None>
     <AppDesigner Include="Properties\" />
     <None Include="Resources\gatari.crt" />
+    <None Include="Resources\kawata.crt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
