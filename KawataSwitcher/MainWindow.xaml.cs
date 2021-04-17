@@ -4,7 +4,7 @@ using System.Windows;
 using System.Windows.Input;
 using System.Windows.Threading;
 
-namespace GatariSwitcher
+namespace KawataSwitcher
 {
     public partial class MainWindow : Window
     {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.IO;
 
-namespace GatariSwitcher.Helpers
+namespace KawataSwitcher.Helpers
 {
     static class HostsFile
     {

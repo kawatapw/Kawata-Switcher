@@ -1,4 +1,4 @@
-﻿namespace GatariSwitcher
+﻿namespace KawataSwitcher
 {
     public class Constants
     {

@@ -1,9 +1,9 @@
 ﻿using System.Linq;
-using GatariSwitcher.Extensions;
-using GatariSwitcher.Helpers;
+using KawataSwitcher.Extensions;
+using KawataSwitcher.Helpers;
 using System.Threading.Tasks;
 
-namespace GatariSwitcher
+namespace KawataSwitcher
 {
     class ServerSwitcher
     {

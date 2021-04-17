@@ -1,7 +1,7 @@
 ﻿using System.Net;
 using System.Threading.Tasks;
 
-namespace GatariSwitcher
+namespace KawataSwitcher
 {
     static class GeneralHelper
     {
