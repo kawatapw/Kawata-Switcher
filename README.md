@@ -1,5 +1,8 @@
-## Warning, Outdated!
-If you wish to continue this simply fork and have fun.
+# Warning, Outdated!
+
+To connect, please refer to this page: https://kawata.pw/doc/connection_guide
+
+If you wish to continue this, simply fork it and have fun.
 
 # Gatari-Switcher
 English version
